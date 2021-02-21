@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>Cheat Sheet Test</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root {
+      --main-bg-color: #643a71;
+      --main-border-radius: 5px;
+      --headline-color: #d183c9;
+      --code-bg-color: rgba(200,200,200,.2);
+      --code-border-color: grey;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: left;
+      background-color: var(--main-bg-color);
+      padding: 5px 10px;
+      border-radius: var(--main-border-radius);
+      color: var(--headline-color);
+    }
+
+    blockquote {
+      color: gray;
+    }
+
+    pre, code {
+      background-color: var(--code-bg-color);      
+    }
+
+    pre code {
+      background-color: transparent;
+    }
+
+    pre {
+      border: 1px solid var(--code-border-color);
+      padding: 10px;
+    }
+
+    .content {
+      columns: 400px 2;
+      column-rule: dashed var(--main-bg-color);
+    }
+
+    .row1,
+    .row2 {
+      display: block;
+      padding: 1em;
+    }
+
+    header {
+      font-size: 3em;
+      font-weight: bolder;
+      text-align: center;
+      padding: 0.5em;
+      background-color: var(--main-bg-color);
+      border-radius: var(--main-border-radius);
+      color: var(--headline-color);
+    }
+  </style>
+  <body>
+    <header>
+      CheatSheet Example
+    </header>
+    <div class="content">
+      <div class="row1"><h1>Hello &#x26; World</h1>
+<h1>Block Quote</h1>
+<blockquote>
+<ul>
+<li>
+<pre><code>code.in.a.list();
+</code></pre>
+</li>
+<li>
+<p>Paragraph.</p>
+</li>
+<li>
+<p>Normal list</p>
+</li>
+</ul>
+<p>Paragraph.</p>
+</blockquote>
+<h1>Code</h1>
+<pre><code class="language-js">alert('some JavaScript code.');
+</code></pre>
+<pre><code>foo bar baz
+</code></pre>
+<pre><code>alpha bravo charlie
+</code></pre>
+<pre><code class="language-empty"></code></pre>
+<pre><code class="language-tabs">  two spaces
+	one
+		two
+	one
+	  mixed.
+</code></pre>
+<h1>Entities</h1>
+<p>Plain text:</p>
+<p>AT&#x26;T with entity, AT&#x26;T with numeric entity, AT&#x26;T without entity.</p>
+<p>Fenced code language flags:</p>
+<pre><code class="language-AT&#x26;T">Something in the AT&#x26;amp;T language
+</code></pre>
+<pre><code class="language-AT&#x26;T">Something in the AT&#x26;#x26;T language
+</code></pre>
+<pre><code class="language-AT&#x26;T">Something in the AT&#x26;T language
+</code></pre>
+<p>Automatic links:</p>
+<p><a href="http://at&#x26;amp;t.com">http://at&#x26;amp;t.com</a>, <a href="http://at&#x26;#x26;t.com">http://at&#x26;#x26;t.com</a>, and <a href="http://at&#x26;t.com">http://at&#x26;t.com</a>.</p>
+<p>Link <code>href</code>:</p>
+<p><a href="http://at&#x26;t.com">With entity</a>, <a href="http://at&#x26;t.com">numeric entity</a>, <a href="http://at&#x26;t.com">without entity</a>.</p>
+<p>Link <code>title</code>:</p>
+<p><a href="http://att.com" title="AT&#x26;T">With entity</a>, <a href="http://att.com" title="AT&#x26;T">numeric entity</a>, <a href="http://example.com" title="AT&#x26;T">without entity</a>.</p>
+<p>Image <code>src</code>:</p>
+<p><img src="http://at&#x26;t.com/fav.ico" alt="With entity">, <img src="http://at&#x26;t.com/fav.ico" alt="numeric entity">, <img src="http://at&#x26;t.com/fav.ico" alt="without entity">.</p>
+<p>Image <code>alt</code>:</p>
+<p><img src="http://att.com/fav.ico" alt="AT&#x26;T with entity">, <img src="http://att.com/fav.ico" alt="AT&#x26;T with numeric entity">, <img src="http://att.com/fav.ico" alt="AT&#x26;T without entity">.</p>
+<p>Image <code>title</code>:</p>
+<p><img src="http://att.com/fav.ico" alt="With entity" title="AT&#x26;T">, <img src="http://att.com/fav.ico" alt="numeric entity" title="AT&#x26;T">, <img src="http://att.com/fav.ico" alt="without entity" title="AT&#x26;T">.</p>
+<p>Reference <code>link</code>:</p>
+<p><a href="http://at&#x26;t.com/fav.ico" title="ATT favicon">Entity</a>, <a href="http://at&#x26;t.com/fav.ico" title="ATT favicon">Numeric entity</a>, <a href="http://at&#x26;t.com/fav.ico" title="ATT favicon">Literal</a>.</p>
+<p><img src="http://at&#x26;t.com/fav.ico" alt="Entity" title="ATT favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="Numeric entity" title="ATT favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="Literal" title="ATT favicon">.</p>
+<p>Reference <code>title</code>:</p>
+<p><a href="http://at&#x26;t.com/fav.ico" title="AT&#x26;T favicon">Entity</a>, <a href="http://at&#x26;t.com/fav.ico" title="AT&#x26;T favicon">Numeric entity</a>, <a href="http://at&#x26;t.com/fav.ico" title="AT&#x26;T favicon">Literal</a>.</p>
+<p><img src="http://at&#x26;t.com/fav.ico" alt="Entity" title="AT&#x26;T favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="Numeric entity" title="AT&#x26;T favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="Literal" title="AT&#x26;T favicon">.</p>
+<p>Image Reference <code>alt</code>:</p>
+<p><img src="http://at&#x26;t.com/fav.ico" alt="AT&#x26;T with entity" title="AT&#x26;T favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="AT&#x26;T with numeric entity" title="AT&#x26;T favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="AT&#x26;T without entity" title="AT&#x26;T favicon">.</p>
+<p>Definitions:</p>
+<h1>Escape commonmark</h1>
+<p>These should all get escaped:</p>
+<p>Backslash: \</p>
+<p>Backtick: `</p>
+<p>Asterisk: *</p>
+<p>Underscore: _</p>
+<p>Left brace: {</p>
+<p>Right brace: }</p>
+<p>Left bracket: [</p>
+<p>Right bracket: ]</p>
+<p>Left paren: (</p>
+<p>Right paren: )</p>
+<p>Greater-than: ></p>
+<p>Hash: #</p>
+<p>Period: .</p>
+<p>Bang: !</p>
+<p>Plus: +</p>
+<p>Minus: -</p>
+<p><strong>GFM:</strong></p>
+<p>Pipe: |</p>
+<p>Tilde: ~</p>
+<p><strong>Commonmark:</strong></p>
+<p>Quote: "</p>
+<p>Dollar: $</p>
+<p>Percentage: %</p>
+<p>Ampersand: &#x26;</p>
+<p>Single quote: '</p>
+<p>Comma: ,</p>
+<p>Forward slash: /</p>
+<p>Colon: :</p>
+<p>Semicolon: ;</p>
+<p>Less-than: &#x3C;</p>
+<p>Equals: =</p>
+<p>Question mark: ?</p>
+<p>At-sign: @</p>
+<p>Caret: ^</p>
+<p>New line: <br>
+only works in paragraphs.</p>
+<p>Two spaces:<br>
+only works in paragraphs.</p>
+<h1>HTML sanatize</h1>
+<h1>Alpha</h1>
+<p><strong>Foo</strong> <em>bar</em> <sup>baz</sup> <sub>qux</sub>.</p>
+<h1>heading</h1>
+<p>Alpha <a href="javascript:alert(1)">bravo</a> charlie.</p>
+<h1>Links</h1>
+<p><a href="http://example.com" title="Example Link">Example</a></p>
+<p><a href="http://example.com">Example</a></p>
+<p><a href="http://example.com"></a></p>
+<p><a href="" title="Example Link"></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<h1>List</h1>
+<ul>
+<li><strong>One</strong>;</li>
+<li><em>Two</em>;</li>
+<li>~~Three~~.</li>
+</ul>
+<ol>
+<li>One;</li>
+<li>Two;</li>
+</ol>
+<!--  -->
+<ol start="4">
+<li>Four.</li>
+<li>Five.</li>
+</ol>
+<ul>
+<li>
+<p>Loose:</p>
+<ul>
+<li>Alpha;</li>
+<li>Bravo;</li>
+<li>Charlie.</li>
+</ul>
+</li>
+<li>
+<p>Loose 2:</p>
+<ul>
+<li>Delta;</li>
+<li>Echo;</li>
+<li>Foxtrot.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<pre><code>And a rule.
+</code></pre>
+</div>
+      <div class="row2"><h1>Hello &#x26; World</h1>
+<h1>Block Quote</h1>
+<blockquote>
+<ul>
+<li>
+<pre><code>code.in.a.list();
+</code></pre>
+</li>
+<li>
+<p>Paragraph.</p>
+</li>
+<li>
+<p>Normal list</p>
+</li>
+</ul>
+<p>Paragraph.</p>
+</blockquote>
+<h1>Code</h1>
+<pre><code class="language-js">alert('some JavaScript code.');
+</code></pre>
+<pre><code>foo bar baz
+</code></pre>
+<pre><code>alpha bravo charlie
+</code></pre>
+<pre><code class="language-empty"></code></pre>
+<pre><code class="language-tabs">  two spaces
+	one
+		two
+	one
+	  mixed.
+</code></pre>
+<h1>Entities</h1>
+<p>Plain text:</p>
+<p>AT&#x26;T with entity, AT&#x26;T with numeric entity, AT&#x26;T without entity.</p>
+<p>Fenced code language flags:</p>
+<pre><code class="language-AT&#x26;T">Something in the AT&#x26;amp;T language
+</code></pre>
+<pre><code class="language-AT&#x26;T">Something in the AT&#x26;#x26;T language
+</code></pre>
+<pre><code class="language-AT&#x26;T">Something in the AT&#x26;T language
+</code></pre>
+<p>Automatic links:</p>
+<p><a href="http://at&#x26;amp;t.com">http://at&#x26;amp;t.com</a>, <a href="http://at&#x26;#x26;t.com">http://at&#x26;#x26;t.com</a>, and <a href="http://at&#x26;t.com">http://at&#x26;t.com</a>.</p>
+<p>Link <code>href</code>:</p>
+<p><a href="http://at&#x26;t.com">With entity</a>, <a href="http://at&#x26;t.com">numeric entity</a>, <a href="http://at&#x26;t.com">without entity</a>.</p>
+<p>Link <code>title</code>:</p>
+<p><a href="http://att.com" title="AT&#x26;T">With entity</a>, <a href="http://att.com" title="AT&#x26;T">numeric entity</a>, <a href="http://example.com" title="AT&#x26;T">without entity</a>.</p>
+<p>Image <code>src</code>:</p>
+<p><img src="http://at&#x26;t.com/fav.ico" alt="With entity">, <img src="http://at&#x26;t.com/fav.ico" alt="numeric entity">, <img src="http://at&#x26;t.com/fav.ico" alt="without entity">.</p>
+<p>Image <code>alt</code>:</p>
+<p><img src="http://att.com/fav.ico" alt="AT&#x26;T with entity">, <img src="http://att.com/fav.ico" alt="AT&#x26;T with numeric entity">, <img src="http://att.com/fav.ico" alt="AT&#x26;T without entity">.</p>
+<p>Image <code>title</code>:</p>
+<p><img src="http://att.com/fav.ico" alt="With entity" title="AT&#x26;T">, <img src="http://att.com/fav.ico" alt="numeric entity" title="AT&#x26;T">, <img src="http://att.com/fav.ico" alt="without entity" title="AT&#x26;T">.</p>
+<p>Reference <code>link</code>:</p>
+<p><a href="http://at&#x26;t.com/fav.ico" title="ATT favicon">Entity</a>, <a href="http://at&#x26;t.com/fav.ico" title="ATT favicon">Numeric entity</a>, <a href="http://at&#x26;t.com/fav.ico" title="ATT favicon">Literal</a>.</p>
+<p><img src="http://at&#x26;t.com/fav.ico" alt="Entity" title="ATT favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="Numeric entity" title="ATT favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="Literal" title="ATT favicon">.</p>
+<p>Reference <code>title</code>:</p>
+<p><a href="http://at&#x26;t.com/fav.ico" title="AT&#x26;T favicon">Entity</a>, <a href="http://at&#x26;t.com/fav.ico" title="AT&#x26;T favicon">Numeric entity</a>, <a href="http://at&#x26;t.com/fav.ico" title="AT&#x26;T favicon">Literal</a>.</p>
+<p><img src="http://at&#x26;t.com/fav.ico" alt="Entity" title="AT&#x26;T favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="Numeric entity" title="AT&#x26;T favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="Literal" title="AT&#x26;T favicon">.</p>
+<p>Image Reference <code>alt</code>:</p>
+<p><img src="http://at&#x26;t.com/fav.ico" alt="AT&#x26;T with entity" title="AT&#x26;T favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="AT&#x26;T with numeric entity" title="AT&#x26;T favicon">, <img src="http://at&#x26;t.com/fav.ico" alt="AT&#x26;T without entity" title="AT&#x26;T favicon">.</p>
+<p>Definitions:</p>
+<h1>Escape commonmark</h1>
+<p>These should all get escaped:</p>
+<p>Backslash: \</p>
+<p>Backtick: `</p>
+<p>Asterisk: *</p>
+<p>Underscore: _</p>
+<p>Left brace: {</p>
+<p>Right brace: }</p>
+<p>Left bracket: [</p>
+<p>Right bracket: ]</p>
+<p>Left paren: (</p>
+<p>Right paren: )</p>
+<p>Greater-than: ></p>
+<p>Hash: #</p>
+<p>Period: .</p>
+<p>Bang: !</p>
+<p>Plus: +</p>
+<p>Minus: -</p>
+<p><strong>GFM:</strong></p>
+<p>Pipe: |</p>
+<p>Tilde: ~</p>
+<p><strong>Commonmark:</strong></p>
+<p>Quote: "</p>
+<p>Dollar: $</p>
+<p>Percentage: %</p>
+<p>Ampersand: &#x26;</p>
+<p>Single quote: '</p>
+<p>Comma: ,</p>
+<p>Forward slash: /</p>
+<p>Colon: :</p>
+<p>Semicolon: ;</p>
+<p>Less-than: &#x3C;</p>
+<p>Equals: =</p>
+<p>Question mark: ?</p>
+<p>At-sign: @</p>
+<p>Caret: ^</p>
+<p>New line: <br>
+only works in paragraphs.</p>
+<p>Two spaces:<br>
+only works in paragraphs.</p>
+<h1>HTML sanatize</h1>
+<h1>Alpha</h1>
+<p><strong>Foo</strong> <em>bar</em> <sup>baz</sup> <sub>qux</sub>.</p>
+<h1>heading</h1>
+<p>Alpha <a href="javascript:alert(1)">bravo</a> charlie.</p>
+<h1>Links</h1>
+<p><a href="http://example.com" title="Example Link">Example</a></p>
+<p><a href="http://example.com">Example</a></p>
+<p><a href="http://example.com"></a></p>
+<p><a href="" title="Example Link"></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<h1>List</h1>
+<ul>
+<li><strong>One</strong>;</li>
+<li><em>Two</em>;</li>
+<li>~~Three~~.</li>
+</ul>
+<ol>
+<li>One;</li>
+<li>Two;</li>
+</ol>
+<!--  -->
+<ol start="4">
+<li>Four.</li>
+<li>Five.</li>
+</ol>
+<ul>
+<li>
+<p>Loose:</p>
+<ul>
+<li>Alpha;</li>
+<li>Bravo;</li>
+<li>Charlie.</li>
+</ul>
+</li>
+<li>
+<p>Loose 2:</p>
+<ul>
+<li>Delta;</li>
+<li>Echo;</li>
+<li>Foxtrot.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<pre><code>And a rule.
+</code></pre>
+</div>
+    </div>
+  </body>
+</html>
