@@ -1,0 +1,125 @@
+:root {
+    --body-bg-color: #222;
+    --main-bg-color: #643a71;
+    --main-font-color: #c5bdc8;
+    --main-border-radius: 5px;
+    --headline-color: #111;
+    --code-bg-color: rgba(211, 129, 255, 0.15);
+    --code-border-color: var(--main-bg-color);
+    --code-font-color: white;
+    --blockquote-bg-color: rgba(100, 100, 100, 0.2);
+    --link-font-color: #6d1c86;
+    font-family: sans-serif;
+  }
+
+  body {
+    background-color: var(--body-bg-color);
+    color: var(--main-font-color);
+  }
+
+  a {
+    color: var(--link-font-color);
+  }
+
+  h1 {
+    text-align: left;
+    background-color: var(--main-bg-color);
+    padding: 5px 10px;
+    border-radius: var(--main-border-radius);
+    color: var(--headline-color);
+    font-size: 1.5em;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+
+  hr {
+    border-color: var(--main-bg-color);
+  }
+
+  blockquote {
+    border-left: 1px solid var(--main-bg-color);
+    padding: 5px;
+  }
+
+  .content {
+    columns: 400px 2;
+    column-rule: dashed var(--main-bg-color);
+  }
+
+  .row {
+    display: block;
+    padding: 1vw;
+    break-inside: avoid;
+  }
+
+  header {
+    font-size: 3em;
+    text-align: center;
+    padding: 0.5em;
+    background-color: var(--main-bg-color);
+    border-radius: var(--main-border-radius);
+    color: var(--headline-color);
+    font-family: monospace;
+    letter-spacing: .2em;
+    font-weight: boldl;
+    margin: 0 1vw;
+  }
+
+  .hljs-comment,
+  .hljs-quote {
+    color: #969896;
+  }
+  .hljs-deletion,
+  .hljs-name,
+  .hljs-regexp,
+  .hljs-selector-class,
+  .hljs-selector-id,
+  .hljs-tag,
+  .hljs-template-variable,
+  .hljs-variable {
+    color: #c66;
+  }
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-link,
+  .hljs-literal,
+  .hljs-meta,
+  .hljs-number,
+  .hljs-params,
+  .hljs-type {
+    color: #de935f;
+  }
+  .hljs-attribute {
+    color: #f0c674;
+  }
+  .hljs-addition,
+  .hljs-bullet,
+  .hljs-string,
+  .hljs-symbol {
+    color: #b5bd68;
+  }
+  .hljs-section,
+  .hljs-title {
+    color: #81a2be;
+  }
+  .hljs-keyword,
+  .hljs-selector-tag {
+    color: #b294bb;
+  }
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    background: #332237;
+    color: #c5c8c6;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin: 0.5em;
+    box-shadow: 3px 3px #00000082;
+  }
+  .hljs-emphasis {
+    font-style: italic;
+  }
+  .hljs-strong {
+    font-weight: 700;
+  }

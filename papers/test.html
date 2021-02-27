@@ -1,75 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="UTF-8" />
-  <title>Cheat Sheet Test</title>
+  <title>Test CheatSheet</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="/../themes/violett-dark.css"
+  />
   <style>
-    :root {
-      --main-bg-color: #643a71;
-      --main-border-radius: 5px;
-      --headline-color: #d183c9;
-      --code-bg-color: rgba(200,200,200,.2);
-      --code-border-color: grey;
-      font-family: sans-serif;
-    }
-
-    h1 {
-      text-align: left;
-      background-color: var(--main-bg-color);
-      padding: 5px 10px;
-      border-radius: var(--main-border-radius);
-      color: var(--headline-color);
-    }
-
-    blockquote {
-      color: gray;
-    }
-
-    pre, code {
-      background-color: var(--code-bg-color);      
-    }
-
-    pre code {
-      background-color: transparent;
-    }
-
-    pre {
-      border: 1px solid var(--code-border-color);
-      padding: 10px;
-    }
-
-    .content {
-      columns: 400px 2;
-      column-rule: dashed var(--main-bg-color);
-    }
-
-    .row1,
-    .row2 {
-      display: block;
-      padding: 1em;
-    }
-
-    header {
-      font-size: 3em;
-      font-weight: bolder;
-      text-align: center;
-      padding: 0.5em;
-      background-color: var(--main-bg-color);
-      border-radius: var(--main-border-radius);
-      color: var(--headline-color);
-    }
+    
   </style>
   <body>
     <header>
-      CheatSheet Example
+      Test CheatSheet
     </header>
     <div class="content">
-      <div class="row1"><h1>Hello &#x26; World</h1>
+      <div class="row"><h1>Hello &#x26; World</h1>
 <h1>Block Quote</h1>
 <blockquote>
 <ul>
 <li>
-<pre><code>code.in.a.list();
+<pre><code class="hljs language-stylus"><span class="hljs-selector-tag">code</span><span class="hljs-selector-class">.in</span><span class="hljs-selector-class">.a</span><span class="hljs-selector-class">.list</span>();
 </code></pre>
 </li>
 <li>
@@ -82,14 +33,18 @@
 <p>Paragraph.</p>
 </blockquote>
 <h1>Code</h1>
-<pre><code class="language-js">alert('some JavaScript code.');
+<pre><code class="hljs language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span>(<span class="hljs-params">abc</span>) </span>{
+  <span class="hljs-keyword">if</span> (abc) {
+    <span class="hljs-keyword">return</span> abc.toUppercase();
+  }
+}
 </code></pre>
-<pre><code>foo bar baz
+<pre><code class="hljs language-mipsasm">foo <span class="hljs-keyword">bar </span><span class="hljs-keyword">baz
+</span></code></pre>
+<pre><code class="hljs language-ebnf"><span class="hljs-attribute">alpha bravo charlie</span>
 </code></pre>
-<pre><code>alpha bravo charlie
-</code></pre>
-<pre><code class="language-empty"></code></pre>
-<pre><code class="language-tabs">  two spaces
+<pre><code class="hljs language-empty"></code></pre>
+<pre><code class="hljs language-tabs">  two spaces
 	one
 		two
 	one
@@ -99,11 +54,11 @@
 <p>Plain text:</p>
 <p>AT&#x26;T with entity, AT&#x26;T with numeric entity, AT&#x26;T without entity.</p>
 <p>Fenced code language flags:</p>
-<pre><code class="language-AT&#x26;T">Something in the AT&#x26;amp;T language
+<pre><code class="hljs language-AT&#x26;T">Something in the AT&#x26;amp;T language
 </code></pre>
-<pre><code class="language-AT&#x26;T">Something in the AT&#x26;#x26;T language
+<pre><code class="hljs language-AT&#x26;T">Something in the AT&#x26;#x26;T language
 </code></pre>
-<pre><code class="language-AT&#x26;T">Something in the AT&#x26;T language
+<pre><code class="hljs language-AT&#x26;T">Something in the AT&#x26;T language
 </code></pre>
 <p>Automatic links:</p>
 <p><a href="http://at&#x26;amp;t.com">http://at&#x26;amp;t.com</a>, <a href="http://at&#x26;#x26;t.com">http://at&#x26;#x26;t.com</a>, and <a href="http://at&#x26;t.com">http://at&#x26;t.com</a>.</p>
@@ -212,15 +167,15 @@ only works in paragraphs.</p>
 </li>
 </ul>
 <hr>
-<pre><code>And a rule.
+<pre><code class="hljs language-armasm"><span class="hljs-keyword">And</span> a rule.
 </code></pre>
 </div>
-      <div class="row2"><h1>Hello &#x26; World</h1>
+      <div class="row"><h1>Hello &#x26; World</h1>
 <h1>Block Quote</h1>
 <blockquote>
 <ul>
 <li>
-<pre><code>code.in.a.list();
+<pre><code class="hljs language-stylus"><span class="hljs-selector-tag">code</span><span class="hljs-selector-class">.in</span><span class="hljs-selector-class">.a</span><span class="hljs-selector-class">.list</span>();
 </code></pre>
 </li>
 <li>
@@ -233,14 +188,30 @@ only works in paragraphs.</p>
 <p>Paragraph.</p>
 </blockquote>
 <h1>Code</h1>
-<pre><code class="language-js">alert('some JavaScript code.');
+<pre><code class="hljs language-js">alert(<span class="hljs-string">'some JavaScript code.'</span>);
 </code></pre>
-<pre><code>foo bar baz
+<pre><code class="hljs language-bash">npm run start
 </code></pre>
-<pre><code>alpha bravo charlie
+<pre><code class="hljs language-gradle">cat someFile.txt | <span class="hljs-keyword">grep</span> <span class="hljs-keyword">this</span>
 </code></pre>
-<pre><code class="language-empty"></code></pre>
-<pre><code class="language-tabs">  two spaces
+<pre><code class="hljs language-css"><span class="hljs-selector-class">.button</span> {
+  <span class="hljs-attribute">color</span>: white;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2em</span> <span class="hljs-number">15px</span>;
+  --test-<span class="hljs-selector-tag">var</span>: inherit;
+}
+</code></pre>
+<pre><code class="hljs language-css"><span class="hljs-selector-class">.button</span> {
+  <span class="hljs-attribute">color</span>: white;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2em</span> <span class="hljs-number">15px</span>;
+  --test-<span class="hljs-selector-tag">var</span>: inherit;
+}
+</code></pre>
+<pre><code class="hljs language-mipsasm">foo <span class="hljs-keyword">bar </span><span class="hljs-keyword">baz
+</span></code></pre>
+<pre><code class="hljs language-ebnf"><span class="hljs-attribute">alpha bravo charlie</span>
+</code></pre>
+<pre><code class="hljs language-empty"></code></pre>
+<pre><code class="hljs language-tabs">  two spaces
 	one
 		two
 	one
@@ -250,11 +221,11 @@ only works in paragraphs.</p>
 <p>Plain text:</p>
 <p>AT&#x26;T with entity, AT&#x26;T with numeric entity, AT&#x26;T without entity.</p>
 <p>Fenced code language flags:</p>
-<pre><code class="language-AT&#x26;T">Something in the AT&#x26;amp;T language
+<pre><code class="hljs language-AT&#x26;T">Something in the AT&#x26;amp;T language
 </code></pre>
-<pre><code class="language-AT&#x26;T">Something in the AT&#x26;#x26;T language
+<pre><code class="hljs language-AT&#x26;T">Something in the AT&#x26;#x26;T language
 </code></pre>
-<pre><code class="language-AT&#x26;T">Something in the AT&#x26;T language
+<pre><code class="hljs language-AT&#x26;T">Something in the AT&#x26;T language
 </code></pre>
 <p>Automatic links:</p>
 <p><a href="http://at&#x26;amp;t.com">http://at&#x26;amp;t.com</a>, <a href="http://at&#x26;#x26;t.com">http://at&#x26;#x26;t.com</a>, and <a href="http://at&#x26;t.com">http://at&#x26;t.com</a>.</p>
@@ -363,7 +334,7 @@ only works in paragraphs.</p>
 </li>
 </ul>
 <hr>
-<pre><code>And a rule.
+<pre><code class="hljs language-armasm"><span class="hljs-keyword">And</span> a rule.
 </code></pre>
 </div>
     </div>
