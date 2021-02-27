@@ -14,7 +14,11 @@
 # Code
 
 ```js
-alert('some JavaScript code.');
+function test(abc) {
+  if (abc) {
+    return abc.toUppercase();
+  }
+}
 ```
 
 ```

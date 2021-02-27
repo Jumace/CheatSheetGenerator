@@ -17,6 +17,31 @@
 alert('some JavaScript code.');
 ```
 
+```bash
+npm run start
+```
+
+```
+cat someFile.txt | grep this
+```
+
+```css
+.button {
+  color: white;
+  padding: 2em 15px;
+  --test-var: inherit;
+}
+```
+
+```css
+.button {
+  color: white;
+  padding: 2em 15px;
+  --test-var: inherit;
+}
+```
+
+
 ```
 foo bar baz
 ```

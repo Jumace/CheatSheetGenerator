@@ -1,22 +1,16 @@
-const {exec} = require("child_process");
-var fs = require("fs");
-const excludedElements = ['dist']
+const fs = require("fs");
+const {buildCheatSheet} = require("./src/utils")
+const excludedElements = []
+const sourceFolder = 'src/cheat-sheets';
 
-fs.watch(".", (event, filename) => {
+fs.watch(sourceFolder,{recursive: true}, (event, filename) => {
   console.log(`[${filename}]: ${event}`);
-
   if (excludedElements.some((element) => {return filename.includes(element)})) {
-      return;
+    return;
   }
-  exec("node index.js", (error, stdout, stderr) => {
-    if (stdout) {
-        console.log("stdout: " + stdout);
-    }
-    if (stderr) {
-        console.log("stderr: " + stderr);
-    }
-    if (error !== null) {
-      console.log("exec error: " + error);
-    }
-  });
+
+  const sheetFolder = filename.match(/[\w\d\s]+\//g);
+  console.log(`build ${sheetFolder}`);
+  const buildPath = `${sourceFolder}/${sheetFolder}index.js`
+  buildCheatSheet(buildPath);
 });

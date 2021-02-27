@@ -16,8 +16,16 @@ $ npm install
 
 Build the cheat sheet by running:
 ```shell
+npm run build
+```
+
+### Starting
+
+Start the web server by running:
+```shell
 npm run start
 ```
+Afterwards navigate to `papers`.
 
 ### Watching
 
