@@ -1,6 +1,7 @@
 :root {
     --body-bg-color: #222;
     --main-bg-color: #643a71;
+    --secondary-bg-color: #8a26a8;
     --main-font-color: #c5bdc8;
     --main-border-radius: 5px;
     --headline-color: #111;
@@ -9,6 +10,7 @@
     --code-font-color: white;
     --blockquote-bg-color: rgba(100, 100, 100, 0.2);
     --link-font-color: #6d1c86;
+    --basic-margin: 1em;
     font-family: sans-serif;
   }
 
@@ -21,9 +23,9 @@
     color: var(--link-font-color);
   }
 
-  h1 {
+  h1, h2 {
     text-align: left;
-    background-color: var(--main-bg-color);
+    background-color: var(--secondary-bg-color);
     padding: 5px 10px;
     border-radius: var(--main-border-radius);
     color: var(--headline-color);
@@ -31,6 +33,14 @@
     font-family: monospace;
     text-transform: uppercase;
     font-weight: lighter;
+  }
+
+  h2 {
+    background-color: var(--main-bg-color);
+  }
+
+  p {
+    margin: var(--basic-margin)
   }
 
   hr {
@@ -62,7 +72,7 @@
     color: var(--headline-color);
     font-family: monospace;
     letter-spacing: .2em;
-    font-weight: boldl;
+    font-weight: bold;
     margin: 0 1vw;
   }
 
@@ -114,7 +124,7 @@
     color: #c5c8c6;
     padding: 0.5em;
     border-radius: 5px;
-    margin: 0.5em;
+    margin: calc(0.5em + var(--basic-margin));
     box-shadow: 3px 3px #00000082;
   }
   .hljs-emphasis {
