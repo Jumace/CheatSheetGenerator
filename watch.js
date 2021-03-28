@@ -9,7 +9,7 @@ fs.watch(sourceFolder,{recursive: true}, (event, filename) => {
     return;
   }
 
-  const sheetFolder = filename.match(/[\w\d\s]+\//g);
+  const sheetFolder = filename.match(/.+\//g);
   console.log(`build ${sheetFolder}`);
   const buildPath = `${sourceFolder}/${sheetFolder}index.js`
   buildCheatSheet(buildPath);
