@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>How-To CheatSheet</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="/../themes/violett-dark.css"
+  />
+  <style>
+    
+  </style>
+  <body>
+    <header>
+      How-To CheatSheet
+    </header>
+    <div class="content">
+      <div class="row"><h1>Getting started</h1>
+<p>In a terminal you need to build the project:</p>
+<pre><code class="hljs language-bash">npm run build
+</code></pre>
+<p>Afterwards you can start the server with:</p>
+<pre><code class="hljs language-bash">npm run start
+</code></pre>
+<h1>Development</h1>
+<p>If you want to develop a new sheet/theme use the watcher:</p>
+<pre><code class="hljs language-batch">npm run watch
+</code></pre>
+<h2>Develop a new theme</h2>
+<blockquote>
+<p>If you are only working on a theme there is not need to start the watcher.</p>
+</blockquote>
+<p>First step to develop a new theme is to copy an existing one, e.g. <code>violett-dark</code>.</p>
+<p>On top of the CSS file you find some CSS variables, use those the adapt the whole theme fast.</p>
+<p>All CSS classes that are starting with <code>hljs</code> are used for <a href="https://github.com/highlightjs/highlight.js/blob/HEAD/docs/css-classes-reference.rst#language-names-and-aliases">code formatting</a>.</p>
+</div>
+      <div class="row"><h1>Develop New Cheat Sheet</h1>
+<p>First make sure the server abd watcher are running.</p>
+<p>Afterwards you need to copy an existing cheat sheet, e.g. <code>how-to</code>. For that go to <code>src/cheat-sheets</code>and copy the folder <code>how-to</code> and rename the new copy.</p>
+<p>In the new cheat sheet folder you find multiple files:</p>
+<h2>index.js</h2>
+<p>The watcher or builder will call this file to create one HTML file out of the .md files in this directory.</p>
+<p>The value of the variable <code>name</code> needs to be changed to the name of your cheat sheet.</p>
+<h2>row[0-9].md</h2>
+<p>One .md file will be one row in the final HTML code.</p>
+<p>The order of the rows is determined by the number in the file name, starting with 1 and counting up.</p>
+<h2>template.html</h2>
+<p>The HTML skeleton for your final cheat sheet.</p>
+<p>In this file you also need to update the name of the cheat sheet.</p>
+<p>Furthermore, if you want different number of rows, you need to adapt the placeholders in this template file.</p>
+<p>Last but not least can you change here the used theme of the cheat sheet.</p>
+<p>For available themes please have a look into the <code>themes</code> folder.</p>
+</div>
+    </div>
+  </body>
+</html>
