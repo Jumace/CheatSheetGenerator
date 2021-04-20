@@ -3,6 +3,7 @@
     --main-bg-color: ;
     --secondary-bg-color: #4226a880;
     --main-font-color: #000;
+    --main-font-shadow-color: lightgrey;
     --main-border-radius: 5px;
     --headline-color: #eee;
     --code-bg-color: rgba(211, 129, 255, 0.15);
@@ -41,10 +42,12 @@ h2 {
 
 h2 {
     background-color: var(--main-bg-color);
+    filter: drop-shadow(0 0 2px var(--main-font-color));
 }
 
 p {
-    margin: var(--basic-margin)
+    margin: var(--basic-margin);
+    filter: drop-shadow(0 0 1px var(--main-font-shadow-color));
 }
 
 hr {
@@ -78,6 +81,7 @@ header {
     letter-spacing: .2em;
     font-weight: bold;
     margin: 0 1vw;
+    filter: drop-shadow(0 0 2px var(--main-font-color));
 }
 
 .hljs-comment,
