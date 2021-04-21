@@ -36,7 +36,8 @@
   }
 
   h2 {
-    background-color: var(--main-bg-color);
+    background-color: var(--body-bg-color);
+    color: var(--secondary-bg-color);
   }
 
   p {
