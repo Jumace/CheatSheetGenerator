@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<title>How-To Shell (basics)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="/../themes/violett-dark.css" />
+<style>
+
+</style>
+
+<body>
+    <header>
+        How-To Shell (basics)
+    </header>
+    <div class="content">
+        <div class="row"><h1>Wording</h1>
+<h2>stdin</h2>
+<p>Stands for: <code>standard in</code></p>
+<p>The default for input if nothing further is specified.</p>
+<p>Shorthand when used with redirections: <code>0</code></p>
+<h2>stdout</h2>
+<p>Stands for: <code>standard out</code></p>
+<p>The default for output if nothing further is specified.</p>
+<p>Shorthand when used with redirections: <code>1</code></p>
+<h2>stderr</h2>
+<p>Stands for <code>standard error</code></p>
+<p>The default for ouput of error messages if nothing further is specified.</p>
+<p>Shorthand when used with redirections: <code>2</code></p>
+<h1>Logical control operators</h1>
+<h2>&#x26;&#x26;</h2>
+<pre><code class="hljs language-shell">npm i &#x26;&#x26; npm run start
+</code></pre>
+<p>The logical &#x26;&#x26; (AND) operator is used to execute multiple commands after each other.
+There is no redirection of output/input.</p>
+<p>Commands are executed from the left. Next command is only executed if the command before was finished successfully.</p>
+<h2>||</h2>
+<pre><code class="hljs language-shell">npm i || ./sendError.sh
+</code></pre>
+<p>The logical || (OR) operator is used to execute a command if the one before failed.
+There is no redirection of output/input.</p>
+<p>For this example if <code>npm i</code> would fail the file <code>sendError.sh</code> would be executed.</p>
+</div>
+        <div class="row"><h1>Redirections</h1>
+<h2>Redirect <code>stdout</code></h2>
+<pre><code class="hljs language-shell">ps aux > processes.txt
+</code></pre>
+<p>Redirect <code>stdout</code> of <code>ps aux</code> to file <code>processes.txt</code>. (file content will be replaces each time)</p>
+<pre><code class="hljs language-shell">ps aux >> processes.txt
+</code></pre>
+<p>Redirect <code>stdout</code> of <code>ps aux</code> to file <code>processes.txt</code>. <code>stdout</code> will be appended to to conent of the file.</p>
+<h2>Redirect <code>stdout</code> and <code>stderr</code></h2>
+<pre><code class="hljs language-shell">    ps aux > processes.txt 2>&#x26;1
+</code></pre>
+<p>This is the old notation where you can see the shorthands for <code>stdout</code> and <code>stderr</code>: <code>2>&#x26;1</code>.</p>
+<pre><code class="hljs language-shell">    ps aux &#x26;> processes.txt
+</code></pre>
+<p>This is the new syntax to make sure that also errors are redirected the same way as <code>stdout</code>.</p>
+<h2>Pipe</h2>
+<p>Redirect the <code>stdout</code> of one command into the <code>stdin</code> of the next.</p>
+<p>Example (list all running processes <code>ps aux</code> and filter <code>grep</code> for specific process):</p>
+<pre><code class="hljs language-shell">ps aux | grep vscode
+</code></pre>
+<p>With the pipe you can chain multiple commands, each command will use the <code>stdout</code> of the last command as their <code>stdin</code>.</p>
+<h1>Tips and Tricks</h1>
+<h2>Reversed Search</h2>
+<p>When you have a terminal open you can do a reverse-search of all the commands you already used.</p>
+<p>For a blank search use the shortcut <code>cmd/ctrl + r</code>. To continue the search you need to use the shortcut again.</p>
+<p>You can also use a search term and then press the shortcut.</p>
+<h2>Ninja Sudo</h2>
+<p>Forgot the run the last command with sudo rights?</p>
+<p>Don't want to write the whole command again?</p>
+<p>There is no need to!</p>
+<pre><code class="hljs language-shell">sudo !!
+</code></pre>
+<p>This will run the last command again but with sudo prepended.</p>
+</div>
+    </div>
+</body>
+
+</html>
