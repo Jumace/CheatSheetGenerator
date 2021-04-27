@@ -21,7 +21,7 @@ Shorthand when used with redirections: `1`
 
 Stands for `standard error`
 
-The default for ouput of error messages if nothing further is specified.
+The default for the output of error messages if nothing further is specified.
 
 Shorthand when used with redirections: `2`
 

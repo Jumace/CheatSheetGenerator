@@ -13,7 +13,7 @@ Redirect `stdout` of `ps aux` to file `processes.txt`. (file content will be rep
 ps aux >> processes.txt
 ```
 
-Redirect `stdout` of `ps aux` to file `processes.txt`. `stdout` will be appended to to conent of the file.
+Redirect `stdout` of `ps aux` to file `processes.txt`. `stdout` will be appended to the content of the file.
 
 
 ## Redirect `stdout` and `stderr`
