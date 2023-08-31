@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<title>How-To Git (basics)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="/../themes/blueprint.css" />
+<style>
+
+</style>
+
+<body>
+    <header>
+        How-To Git (basics)
+    </header>
+    <div class="content">
+        <div class="row"><h1>Cloning</h1>
+<p>To clone a repository one needs the repository url, e.g. <code>https://github.com/Jumace/CheatSheetGenerator.git</code></p>
+<p>Once that is obtained open your terminal/console and type:</p>
+<pre><code class="hljs language-shell">git clone https://github.com/Jumace/CheatSheetGenerator.git
+</code></pre>
+<h1>Checking status</h1>
+<p>To check the status of the current respository use</p>
+<pre><code class="hljs language-shell">git status
+</code></pre>
+<h1>Creating commits</h1>
+<p>After a few changes on the code base are done one can create a commit</p>
+<p>First the changes need to be staged</p>
+<pre><code class="hljs language-shell">git add .
+</code></pre>
+<p>Next a commit with the staged changed can be created</p>
+<pre><code class="hljs language-shell">git commit -m 'this is my first commit'
+</code></pre>
+<h2>Ammending to a already created commit</h2>
+<pre><code class="hljs language-shell">git commit --amend
+</code></pre>
+<h2>Ammend without changing the commit message</h2>
+<pre><code class="hljs language-shell">git commit --amend --no-edit
+</code></pre>
+<h1>Pushing &#x26; Pulling</h1>
+<h2>Pushing</h2>
+<p>If there is locally a commit that is not on the remote yet use the following command to push it to the remote</p>
+<pre><code class="hljs language-shell">git push
+</code></pre>
+<p>There are cases where one needs to convince the remote to take the local commit, a so called force push:</p>
+<pre><code class="hljs language-shell">git push --force-with-lease
+</code></pre>
+<h2>Pulling</h2>
+<p>To pull changes from the remote to your local environemnt call</p>
+<pre><code class="hljs language-shell">git pull
+</code></pre>
+</div>
+        <div class="row"><h1>Stashing</h1>
+<h2>Create a stash</h2>
+<p>If one wants to temporarly save local changes (for example to switch between branches), stashing is the way to go</p>
+<pre><code class="hljs language-shell">git stash .
+</code></pre>
+<p>You can also add a comment to that stash</p>
+<pre><code class="hljs language-shell">git stash . -m 'description of stashed changes'
+</code></pre>
+<h2>List all stashes</h2>
+<p>To get an overview of all the stashes run</p>
+<pre><code class="hljs language-shell">git stash list
+</code></pre>
+<h2>Retrieve a stash</h2>
+<p>To get the changes out of a stash there are two commands that can be used</p>
+<p>Get the changes from a specific stash but leave it in the stash list</p>
+<pre><code class="hljs language-shell">git stash apply stash{0}
+</code></pre>
+<p>Get changes from a specifc stash and remove it from the stsh list</p>
+<pre><code class="hljs language-shell">git stash pop stash{0}
+</code></pre>
+<h1>Rebasing</h1>
+<p>Rebasing can be important if your branch is not up-to-date anymore with the branch you want it to merge into</p>
+<p>Given one is on a feature branch (e.g. feat/enable-cheatcodes) and wants to merge it into the main branch, following steps are needed</p>
+<p>Checkout the target branch, in this case main</p>
+<pre><code class="hljs language-shell">git checkout main
+</code></pre>
+<p>Update the target branch</p>
+<pre><code class="hljs language-shell">git pull
+</code></pre>
+<p>Switch back to the feature branch</p>
+<pre><code class="hljs language-shell">git checkout -
+</code></pre>
+<p>Run the rebase command (adapt 'main' with your target branch)</p>
+<pre><code class="hljs language-shell">git rebase origin/main
+</code></pre>
+<p>Resolve merge conflicts if needed</p>
+<h2>Interactive rebasing</h2>
+<p>Interactive rebasing can be quite handy if you want to squash commits are change their order</p>
+<p>First figure our how many commits you want to influnce of a <code>git status</code></p>
+<p>Next run this command to start the interactive rebasing (the number is the number of commits that one wants to interact with)</p>
+<pre><code class="hljs language-shell">git rebase -i HEAD~4
+</code></pre>
+<p>One will get an overview of the commits something similar to</p>
+<pre><code class="hljs language-shell">pick 7a3fa3c feat(themes): new blueprint theme
+pick ad4ba53 fix(theme/blueprint): increase text contrast to background
+pick 4dcf184 feat(cheat-sheet): create shell basics paper
+pick 24241aa docs(shell-basics): remove typos
+</code></pre>
+<p>The first word is the action that should be done with the commit, for more actions follow the instructions under the list of commits</p>
+</div>
+    </div>
+</body>
+
+</html>
